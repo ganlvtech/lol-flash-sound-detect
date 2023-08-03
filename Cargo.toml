@@ -1,0 +1,26 @@
+[package]
+name = "lol-flash-detect"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[example]]
+name = "wav_conv_csv"
+crate-type = ["bin"]
+
+[dependencies]
+anyhow = "1.0.72"
+byteorder = "1.4.3"
+httparse = "1.8.0"
+
+[dependencies.windows]
+version = "0.48"
+features = [
+    "Win32_Foundation",
+    "Win32_System_Com",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_Media_Audio",
+    "Win32_Media_KernelStreaming",
+    "Win32_Media_Multimedia",
+]
